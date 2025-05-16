@@ -2,7 +2,8 @@
 
 # APT Proxy Configuration Editor
 aka
-# apt-proxy-edit
+### apt-proxy-edit
+
 
 Edit apt.conf to include proxies with ease.
 
@@ -34,13 +35,18 @@ This tool aims to make APT proxy management more accessible and less error-prone
 * **Tkinter:** The Tkinter library for Python, which is usually included with standard Python installations. If not, it can typically be installed via your distribution's package manager (e.g., `sudo apt install python3-tk`).
 * **Optional (for enhanced privilege escalation):**
     * `pkexec` (part of Polkit) for the "Elevate Privileges" feature.
-    * `zenity` for a graphical password prompt if `pkexec` is not fully configured or preferred for `sudo -E` fallback. (e.g., `sudo apt install zenity`).
+    * `zenity` for a graphical password prompt if `pkexec` is not fully configured or preferred for `sudo -E` fallback.
 * **Permissions:**
     * Read access to `/etc/apt/apt.conf` is needed to view settings.
     * Write access (root privileges) to `/etc/apt/apt.conf` is required to save changes, auto-correct the file, or set up the Polkit policy.
 
 ## Setup and Installation
+(Assuming you have access to a connection somewhere that does not require you use a proxy to use apt)
 
+### BEFORE INSTALLATION 
+```bash
+sudo apt install python3-tk zenity
+```
 There are two primary ways to use this application:
 
 ### Option 1: Direct Execution (Recommended for quick use or development)
